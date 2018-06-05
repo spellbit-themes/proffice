@@ -1,0 +1,6 @@
+li#accordion-panel-proffice_option_panel > h3.accordion-section-title::before {
+    content: "\f111";
+    font-family: dashicons;
+    padding: 3px;
+
+}
