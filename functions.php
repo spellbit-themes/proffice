@@ -139,11 +139,11 @@ function sb_proffice_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 
-	// blog sidebar
+	// default sidebar
 	register_sidebar( array(
-		'name'          => esc_html__( 'Blog Sidebar', 'sb_proffice' ),
-		'id'            => 'blog-widget',
-		'description'   => esc_html__( 'Add blog content from here.', 'sb_proffice' ),
+		'name'          => esc_html__( 'Default Sidebar', 'sb_proffice' ),
+		'id'            => 'default-widget',
+		'description'   => esc_html__( 'This is default sidebar for single page,  blog, single post sidebar', 'sb_proffice' ),
 		'before_widget' => '<div class="card custuom-single-card">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<div class="card-header">',
@@ -173,14 +173,14 @@ function sb_proffice_scripts() {
 
 
 	//plugins JS
-	wp_enqueue_script( 'plug_js', get_template_directory_uri() . '/assets/js/plugins.js', array('jquery'), '4.4.5', true );
+	wp_enqueue_script( 'plug_js', get_theme_file_uri() . '/assets/js/plugins.js', array('jquery'), '4.4.5', true );
 
 	//app JS
-	wp_enqueue_script( 'app_js', get_template_directory_uri() . '/assets/js/app.js', array('jquery'), NULL, true );
+	wp_enqueue_script( 'app_js', get_theme_file_uri() . '/assets/js/app.js', array('jquery'), NULL, true );
 
-	wp_enqueue_script( 'sb_proffice-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'sb_proffice-navigation', get_theme_file_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'sb_proffice-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'sb_proffice-skip-link-focus-fix', get_theme_file_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -191,7 +191,7 @@ add_action( 'wp_enqueue_scripts', 'sb_proffice_scripts' );
 
 //Add custom icon on customizer menu
 function sb_proffice_custom_customize_enqueue() {
-	wp_enqueue_style( 'sb_customizer-css', get_stylesheet_directory_uri() . '/assets/css/customizer-css.css' );
+	wp_enqueue_style( 'sb_customizer-css', get_theme_file_uri() . '/assets/css/customizer-css.css' );
 }
 add_action( 'customize_controls_enqueue_scripts', 'sb_proffice_custom_customize_enqueue' );
 
@@ -201,110 +201,6 @@ function sb_proffice_default_menu(){
 	echo "<ul><li class='current-menu-item'><a href='".home_url()."'> Home</a></li></ul>";
 }
 
-
-
-/**
-*
-* admin inline js
-* for post format	
-*
-*/
-add_action('admin_print_scripts', 'digitalnews_inline_js', 1000);
-
-function digitalnews_inline_js(){
-
-	if( get_post_type() === 'post'): ?>
-		<script type="text/javascript">
-			jQuery(document).ready(function(){
-
-
-				$id = jQuery('input[name="post_format"]:checked').attr('id');
-
-				// video
-				if( $id == 'post-format-video'){
-					jQuery('.cmb2-id-video-link').show();
-				}else{
-					jQuery('.cmb2-id-video-link').hide();
-				}
-
-				// audio
-				if( $id == 'post-format-audio'){
-					jQuery('.cmb2-id-audio-link').show();
-					
-				}else{
-					jQuery('.cmb2-id-audio-link').hide();
-				}
-
-				// gallery
-				if( $id == 'post-format-gallery'){
-					jQuery('.cmb2-id-gallery-images').show();
-					
-				}else{
-					jQuery('.cmb2-id-gallery-images').hide();
-				}
-
-
-				// quote
-				if( $id == 'post-format-quote'){
-					jQuery('.cmb2-id-quote-text').show();
-					
-				}else{
-					jQuery('.cmb2-id-quote-text').hide();
-				}
-
-
-				/**
-				*
-				* 2nd step
-				*
-				*/
-				jQuery('input[name="post_format"]').change(function(){
-
-					
-
-					$id = jQuery('input[name="post_format"]:checked').attr('id');
-
-					// video
-					if( $id == 'post-format-video'){
-						jQuery('.cmb2-id-video-link').show();
-					}else{
-						jQuery('.cmb2-id-video-link').hide();
-					}
-
-					// audio
-					if( $id == 'post-format-audio'){
-						jQuery('.cmb2-id-audio-link').show();
-						
-					}else{
-						jQuery('.cmb2-id-audio-link').hide();
-					}
-
-					// gallery
-					if( $id == 'post-format-gallery'){
-						jQuery('.cmb2-id-gallery-images').show();
-						
-					}else{
-						jQuery('.cmb2-id-gallery-images').hide();
-					}
-
-					// quote
-					if( $id == 'post-format-quote'){
-						jQuery('.cmb2-id-quote-text').show();
-						
-					}else{
-						jQuery('.cmb2-id-quote-text').hide();
-					}
-
-
-				});
-
-
-			});	
-		</script>
-
-	<?php endif; 
- 
-}
 
 
 /**

@@ -1,4 +1,4 @@
-li#accordion-panel-proffice_option_panel > h3.accordion-section-title::before {
+li#accordion-panel-proffice_option_panel > h3.accordion-section-title::before, li#accordion-panel-general_section_panel_id > h3.accordion-section-title::before,li#accordion-panel-home_section_panel_id > h3.accordion-section-title::before{
     content: "\f111";
     font-family: dashicons;
     padding: 3px;

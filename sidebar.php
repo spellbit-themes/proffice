@@ -7,13 +7,13 @@
  * @package proffice
  */
 
-if (  is_active_sidebar( 'blog-widget' ) ) : ?>
+if (  is_active_sidebar( 'default-widget' ) ) : ?>
 	
 
 
 <aside class="sidebar">
 
-<?php  dynamic_sidebar( 'blog-widget' ); ?>
+<?php  dynamic_sidebar( 'default-widget' ); ?>
   
 </aside>
 

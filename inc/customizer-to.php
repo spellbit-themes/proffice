@@ -68,6 +68,8 @@ function sb_proffice_theme_options($wp_customize){
 	// footer section
 	require_once('customize-to-footer.php');
 
+	require_once('customize-to-page-options.php');
+
 
 
 

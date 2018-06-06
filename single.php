@@ -13,23 +13,15 @@ get_header();
 
 
 
-<div class="blog-area innerpage">
+<div class="blog-area innerpage no-padding">
     <div class="container">
-        <div class="row">
-            <div class="col-12 section-ttile text-center">
-                   <h2> our blog</h2>
-                   <span>
-                       latest news
-                   </span>
-               </div><!-- end section titile -->
-        </div>
         <div class="row">
           <div class="col-12">
 
           	<?php 
 
           	while ( have_posts() ) : the_post(); 
-			get_template_part( 'template-parts/posts/content', get_post_type() );
+			get_template_part( 'template-parts/posts/content', get_post_format() );
 
 			the_post_navigation();
 

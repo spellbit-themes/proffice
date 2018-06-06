@@ -1,5 +1,7 @@
-<article class="single-blog innerpage Fullpage">
-	<h2>content-standard</h2>	
+<article <?php post_class(array('single-blog', 'innerpage', 'Fullpage')) ?>>
+    <figure class="blog-thumb">
+		<?php the_post_thumbnail('blog-full-image'); ?>
+    </figure>
   <div class="blog-content">
       <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
       <?php echo wpautop(the_content()); ?>

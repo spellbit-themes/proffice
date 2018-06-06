@@ -1,9 +1,9 @@
 <?php 
 
-	// section
+	// Footer section
 	$wp_customize->add_section('general_section_id',array(
 		'title' => 'Footer Section',
-		'priority' => 10,
+		'priority' => 11,
 		'panel' => 'general_section_panel_id'
 	));
 	
@@ -53,29 +53,4 @@
 
 
 
-// section
-$wp_customize->add_section('page_section_id',array(
-	'title' => 'Page Options',
-	'priority' => 10,
-	'panel' => 'general_section_panel_id'
-));
 
-// Enable or Disable brands section
-Kirki::add_field( 'sb_proffice_kirki_id', array(
-	'type'     => 'switch',
-	'settings' => 'enable_page_title_bg',
-	'label'    => __( 'Enable or Diable Page Background Image', 'sb_proffice' ),
-	'section'  => 'page_section_id',
-	'default'  => '1',
-	'priority' => 10,
-	
-) );
-
-Kirki::add_field( 'sb_proffice_kirki_id', array(
-	'type'        => 'image',
-	'settings'    => 'pg_bg_image',
-	'label'       => esc_attr__( 'Image Control (array)', 'textdomain' ),
-	'description' => esc_attr__( 'Description Here.', 'textdomain' ),
-	'section'     => 'page_section_id',
-	'default'     => '',
-) );

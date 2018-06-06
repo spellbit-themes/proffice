@@ -88,18 +88,25 @@ $page_bg_images = get_theme_mod('pg_bg_image');
 <?php if( is_page() ): ?>
   <?php if($enable_page_background == '1'){ ?>  
     <div class="banner-arae" style="background-image: url(<?php echo esc_url($page_bg_images); ?>);">
+        <div class="container">
+            <div class="row bn_height justify-content-center align-items-center">
+                <div class="col-12 text-center">
+                    <h2>
+					    <?php wp_title(''); ?>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
 <?php }else{ ?>   
-    <div class="banner-arae">
+    <div class="only-title">
+        <div class="col-12 text-center">
+            <h2>
+			    <?php wp_title(''); ?>
+            </h2>
+        </div>
+    </div>
 
 <?php } ?> 
-  <div class="container">
-    <div class="row bn_height justify-content-center align-items-center">
-      <div class="col-12 text-center">
-        <h2>
-          <?php wp_title(''); ?>
-        </h2>
-      </div>
-    </div>
-  </div>
-</div>
+
 <?php endif; ?>

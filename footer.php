@@ -82,7 +82,7 @@ $copy_info       = get_theme_mod('footer_copy_info');
     <div class="footer-bottom">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6 col-12"><?php if($copy_info){ echo wpautop($copy_info);} else { echo "All right reserved to <a href='http://spellbit.com'>Spellbit</a>";} ?></div>
+                <div class="col-md-6 col-12"><?php if($copy_info){ echo wpautop($copy_info);} else { echo "© All right reserved by <a href=\"http://www.spellbit.com\">Spellbit</a>";} ?></div>
                 <div class="col-md-6 col-12">
                     <ul class="f-social">
                         <?php

@@ -23,10 +23,18 @@ $enable = get_theme_mod('enable_blog_section', true);
                 <span><?php echo esc_html($sub_title); ?></span>
               <?php endif; ?>   
            </div>
-         <?php endif; ?> 
+              <!-- if there is no title or subtitle, then show the default markup -->
+          <?php else: ?>
+              <div class="col-12 section-ttile text-center">
+                  <h2>Our Blog</h2>
+                  <span>
+                     Latest News
+                 </span>
+              </div>
+         <?php endif; ?>
 
 
-    <?php 
+    <?php
         $q = new WP_Query(array(
             'post_type'         => 'post',
             'posts_per_page'    => $count,
