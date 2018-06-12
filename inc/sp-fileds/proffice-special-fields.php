@@ -80,7 +80,7 @@ new Kirki_L10n();
 require_once wp_normalize_path( dirname( __FILE__ ) . '/deprecated/deprecated.php' );
 
 // Include the ariColor library.
-require_once wp_normalize_path( dirname( __FILE__ ) . '/lib/class-aricolor.php' );
+//require_once wp_normalize_path( dirname( __FILE__ ) . '/lib/class-aricolor.php' );
 
 // Add an empty config for global fields.
 Kirki::add_config( '' );
