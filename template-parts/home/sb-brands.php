@@ -1,12 +1,12 @@
 <?php 
-$brands = get_theme_mod('sb_proffice_brands');
+$brands = get_theme_mod('proffice_brands');
 
-$enable_brand = get_theme_mod('enable_brand_section', true);
+$enable_brand = get_theme_mod('brand_switch', 'yes');
 ?>
 
 
 
-<?php if($enable_brand == '1'){ ?>
+<?php if($enable_brand == 'yes'){ ?>
   <div class="product-carosel-area">
         <div class="container">
             <div class="row">

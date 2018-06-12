@@ -8,12 +8,6 @@
 	));
 
 
-	/**
-	* sb_proffice_kirki_id is found in kirki-config.php
-	* Please don't change it
-	* 
-	* all fields goes below
-	*/
 Kirki::add_field( 'sb_proffice_kirki_id', array(
 	'type'     => 'switch',
 	'settings' => 'enable_slide_section',

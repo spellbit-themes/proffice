@@ -8,8 +8,8 @@
  *
  * @package proffice
  */
-$enable_page_background = get_theme_mod('enable_page_title_bg', true); 
-$page_bg_images = get_theme_mod('pg_bg_image');
+$enable_page_background = get_theme_mod('page_banner_switch', true);
+$page_bg_images = get_theme_mod('page_banner_bg');
 
 ?>
 <!doctype html>
@@ -86,7 +86,7 @@ $page_bg_images = get_theme_mod('pg_bg_image');
     </header>
 
 <?php if( is_page() ): ?>
-  <?php if($enable_page_background == '1'){ ?>  
+  <?php if($enable_page_background == 'yes'){ ?>
     <div class="banner-arae" style="background-image: url(<?php echo esc_url($page_bg_images); ?>);">
         <div class="container">
             <div class="row bn_height justify-content-center align-items-center">

@@ -160,7 +160,7 @@ function sb_proffice_scripts() {
 	wp_enqueue_style( 'sb_proffice-style', get_stylesheet_uri() );
 
 	// Fontawesome CDN
-	wp_enqueue_style( 'sb_proffice_boot', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', array(), null );
+	wp_enqueue_style( 'fontawesomne', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', array(), null );
 
 	//Custom Font
 	wp_enqueue_style( 'sb_proffice_font', 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700', array(), null );
@@ -236,12 +236,24 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
-/**
- * Adding Kirki main file
- */
-require get_template_directory() . '/kirki/kirki.php';
+
+/******************
+ * Starting kirki configuration from here
+ ******************/
+if ( ! class_exists( 'Kirki' ) ) {
+	include_once( dirname( __FILE__ ) . '/inc/kirki/kirki.php' );
+}
+function proffice_customizer_config() {
+	$args = array(
+
+		'url_path'     => get_stylesheet_directory_uri() . '/inc/kirki/',
+
+	);
+	return $args;
+}
+add_filter( 'kirki/config', 'proffice_customizer_config' );
 
 /**
- * Adding Theme Option
+ * Theme Option file.
  */
-require get_template_directory() . '/inc/customizer-to.php';
+require get_template_directory() . '/inc/theme-options.php';

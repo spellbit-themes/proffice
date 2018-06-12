@@ -27,12 +27,12 @@ Kirki::add_field( 'sb_proffice_kirki_id', array(
 
 Kirki::add_field( 'sb_proffice_kirki_id', array(
 	'type'        => 'repeater',
-	'label'       => esc_attr__( 'Manage Brands Logo', 'sb_proffice' ),
+	'label'       => esc_attr__( 'Manage Brand Logo', 'sb_proffice' ),
 	'section'     => 'brands_section_id',
 	'priority'    => 10,
 	'row_label' => array(
 		'type' => 'text',
-		'value' => esc_attr__('Brands Logo', 'sb_proffice' ),
+		'value' => esc_attr__('Brand Logo', 'sb_proffice' ),
 	),
 	'button_label' => esc_attr__('Add Brand Logo', 'sb_proffice' ),
 	'settings'     => 'sb_proffice_brands',
@@ -40,7 +40,7 @@ Kirki::add_field( 'sb_proffice_kirki_id', array(
 		'brand_logo' => array(
 			'type'        => 'image',
 			'label'       => esc_attr__( 'Brand Logo', 'sb_proffice' ),
-			'description' => esc_attr__( 'Upload your brands logo here', 'sb_proffice' ),
+			'description' => esc_attr__( 'Upload your brand logo here', 'sb_proffice' ),
 			'default'     => '',
 			'choices'     => array(
 				'save_as' => 'id'

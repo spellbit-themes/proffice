@@ -1,13 +1,13 @@
 <?php 
-$slides = get_theme_mod('sb_proffice_slides');
+$slides = get_theme_mod('proffice_slides');
 
-$enable_slide = get_theme_mod('enable_slide_section', true);
+$enable_slide = get_theme_mod('slider_switch', 'yes');
 
 
 ?>
 
 
-<?php if($enable_slide == '1'){ ?>
+<?php if($enable_slide == 'yes'){ ?>
 <div class="site--slider__area">
     <div class="slider-active owl-carousel">
             <?php
@@ -29,8 +29,12 @@ $enable_slide = get_theme_mod('enable_slide_section', true);
                         <div class="col-sm-12 text-center">
                             <h2><?php echo $title; ?></h2>
                             <?php echo wpautop($desc); ?>
+                           <?php if($left_btn_text): ?>
                             <a href="<?php echo esc_url($left_btn_url); ?>" class="btn-mr th-primary pill"> <?php echo esc_html($left_btn_text); ?></a>
+                            <?php endif; ?>
+	                <?php if($right_btn_text): ?>
                             <a href="<?php echo esc_url($right_btn_url); ?>" class="btn-mr th-primary-outline pill"> <?php echo esc_html($right_btn_text); ?></a>
+	                <?php endif; ?>
                         </div>
                     </div>
                 </div>

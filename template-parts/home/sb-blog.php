@@ -1,14 +1,14 @@
 <?php 
 
-$title    = get_theme_mod('blog_title');
-$subtitle = get_theme_mod('blog_subtitle');
-$count    = get_theme_mod('blog_post_number');
-$order    = get_theme_mod('blog_post_order');
+$title    = get_theme_mod('section_blog_title','Blog');
+$sub_title = get_theme_mod('section_blog_subtitle','Latest News');
+$count    = get_theme_mod('section_blog_post_count',3);
+$order    = get_theme_mod('blog_order','ASC');
 
-$enable = get_theme_mod('enable_blog_section', true);
+$enable = get_theme_mod('blog_switch', true);
 ?>
 
-<?php if($enable == '1'){ ?>
+<?php if($enable == 'yes'){ ?>
 <div class="blog-area">
     <div class="container">
         <div class="row">
@@ -24,13 +24,6 @@ $enable = get_theme_mod('enable_blog_section', true);
               <?php endif; ?>   
            </div>
               <!-- if there is no title or subtitle, then show the default markup -->
-          <?php else: ?>
-              <div class="col-12 section-ttile text-center">
-                  <h2>Our Blog</h2>
-                  <span>
-                     Latest News
-                 </span>
-              </div>
          <?php endif; ?>
 
 

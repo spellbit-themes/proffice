@@ -1,15 +1,15 @@
 <?php 
-$title = get_theme_mod('services_area_title');
-$sub_title = get_theme_mod('services_area_sub_title');
+$title = get_theme_mod('section_service_title','Our Service');
+$sub_title = get_theme_mod('section_service_subtitle','What We Do');
 
-$services = get_theme_mod('sb_proffice_services');
+$services = get_theme_mod('proffice_services');
 
-$enable = get_theme_mod('enable_service_section', true);
+$enable = get_theme_mod('service_switch', 'yes');
 
 
 
 ?>
-<?php if($enable == '1'){ ?>
+<?php if($enable == 'yes'){ ?>
 <div class="services-area">
    <div class="container">
        <div class="row">
@@ -29,15 +29,7 @@ $enable = get_theme_mod('enable_service_section', true);
               <?php endif; ?>   
            </div>
 
-           <!-- if there is no title or subtitle, then show the default markup -->
-         <?php else: ?>
-            <div class="col-12 section-ttile text-center">
-                 <h2> our services</h2>
-                 <span>
-                     we provides
-                 </span>
-             </div>
-         <?php endif; ?>  
+         <?php endif; ?>
 
 
 
