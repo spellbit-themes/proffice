@@ -92,7 +92,7 @@ if ( file_exists( $custom_config_path ) ) {
 }
 
 // Add upgrade notifications.
-require_once wp_normalize_path( dirname( __FILE__ ) . '/upgrade-notifications.php' );
+//require_once wp_normalize_path( dirname( __FILE__ ) . '/upgrade-notifications.php' );
 
 /**
  * To enable tests, add this line to your wp-config.php file (or anywhere alse):

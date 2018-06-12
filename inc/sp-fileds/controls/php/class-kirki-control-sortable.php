@@ -2,11 +2,6 @@
 /**
  * Customizer Control: sortable.
  *
- * @package     Kirki
- * @subpackage  Controls
- * @copyright   Copyright (c) 2017, Aristeides Stathopoulos
- * @license     http://opensource.org/licenses/https://opensource.org/licenses/MIT
- * @since       1.0
  */
 
 // Exit if accessed directly.

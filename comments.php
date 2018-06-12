@@ -28,18 +28,18 @@ if ( post_password_required() ) {
 		?>
 		<h2 class="comments-title">
 			<?php
-			$sb_proffice_comment_count = get_comments_number();
-			if ( '1' === $sb_proffice_comment_count ) {
+			$proffice_comment_count = get_comments_number();
+			if ( '1' === $proffice_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'sb_proffice' ),
+					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'proffice' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $sb_proffice_comment_count, 'comments title', 'sb_proffice' ) ),
-					number_format_i18n( $sb_proffice_comment_count ),
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $proffice_comment_count, 'comments title', 'proffice' ) ),
+					number_format_i18n( $proffice_comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			}
@@ -63,7 +63,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'sb_proffice' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'proffice' ); ?></p>
 			<?php
 		endif;
 

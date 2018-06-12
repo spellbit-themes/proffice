@@ -21,7 +21,7 @@ class Kirki_L10n {
 	 * @access private
 	 * @var string
 	 */
-	private $textdomain = 'kirki';
+	private $textdomain = 'proffice';
 
 	/**
 	 * The theme textdomain
@@ -29,7 +29,7 @@ class Kirki_L10n {
 	 * @access private
 	 * @var string
 	 */
-	private $theme_textdomain = '';
+	private $theme_textdomain = 'proffice';
 
 	/**
 	 * The class constructor.

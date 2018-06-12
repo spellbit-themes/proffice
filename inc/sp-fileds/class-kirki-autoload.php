@@ -2,15 +2,6 @@
 /**
  * The Kirki autoloader.
  * Handles locating and loading other class-files.
- *
- * @package     Kirki
- * @category    Core
- * @author      Aristeides Stathopoulos
- * @copyright   Copyright (c) 2017, Aristeides Stathopoulos
- * @license     http://opensource.org/licenses/https://opensource.org/licenses/MIT
- * @since       1.0
- */
-
 /**
  * Autoloader class.
  *
