@@ -42,7 +42,6 @@ get_header();
 
 
 
-
 	
 
 <?php
