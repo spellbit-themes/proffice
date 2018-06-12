@@ -8,8 +8,9 @@
  */
 
 if (  is_active_sidebar( 'default-widget' ) ) : ?>
-	
 
+<div class="col-lg-4">
+	
 
 <aside class="sidebar">
 
@@ -68,8 +69,8 @@ if (  is_active_sidebar( 'default-widget' ) ) : ?>
                 </ul>
               </div>
             </div><!-- end single card -->
-              
-              
-         
+
+
+    </div><!-- end sidebar -->
 
 <?php endif; ?>

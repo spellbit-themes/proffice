@@ -242,12 +242,12 @@ if ( class_exists( 'WooCommerce' ) ) {
  * Starting kirki configuration from here
  ******************/
 if ( ! class_exists( 'Kirki' ) ) {
-	include_once( dirname( __FILE__ ) . '/inc/ki/proffice-special-fields.php' );
+	include_once( dirname( __FILE__ ) . '/inc/sp-fileds/proffice-special-fields.php' );
 }
 function proffice_customizer_config() {
 	$args = array(
 
-		'url_path'     => get_stylesheet_directory_uri() . '/inc/ki',
+		'url_path'     => get_stylesheet_directory_uri() . '/inc/sp-fileds',
 
 	);
 	return $args;
