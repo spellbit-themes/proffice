@@ -39,9 +39,10 @@ get_header();
             ?>      
           </div><!-- end blog psots -->
 
-           <div class="col-lg-4">
+      
+      
             <?php get_sidebar(); ?>
-          </div><!-- end sidebar -->
+          
 
         </div>
     </div>

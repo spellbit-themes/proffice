@@ -7,9 +7,9 @@
  * @package proffice
  */
 
-if (  is_active_sidebar( 'default-widget' ) ) : ?>
-
+?>
 <div class="col-lg-4">
+<?php if (  is_active_sidebar( 'default-widget' ) ) : ?>
 
 
 <aside class="sidebar">
@@ -19,6 +19,7 @@ if (  is_active_sidebar( 'default-widget' ) ) : ?>
 </aside>
 
 <?php else: ?>
+
 
 
 
@@ -70,7 +71,7 @@ if (  is_active_sidebar( 'default-widget' ) ) : ?>
               </div>
             </div><!-- end single card -->
 
-
-    </div><!-- end sidebar -->
+</div><!-- end sidebar -->
+    
 
 <?php endif; ?>

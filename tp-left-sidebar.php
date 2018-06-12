@@ -21,9 +21,9 @@
     <div class="container">
         <div class="row">
 
-        	<div class="col-lg-4">
-            <?php get_sidebar(); ?>
-          </div><!-- end sidebar -->
+     
+           
+          
 
 
 
@@ -46,6 +46,7 @@
 
             ?>      
           </div><!-- end blog psots -->
+
 
         </div>
     </div>
