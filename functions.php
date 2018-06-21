@@ -199,13 +199,6 @@ function proffice_custom_customize_enqueue() {
 }
 add_action( 'customize_controls_enqueue_scripts', 'proffice_custom_customize_enqueue' );
 
-// Default menu
-function proffice_default_menu(){
-
-	echo "<ul><li class='current-menu-item'><a href='".home_url()."'> Home</a></li></ul>";
-}
-
-
 
 /**
  * Implement the Custom Header feature.
