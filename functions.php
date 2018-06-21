@@ -103,6 +103,9 @@ if ( ! function_exists( 'proffice_setup' ) ) :
 		// page title backgrond image
 		add_image_size('page_title_bg_full', 1900, 300, true);
 
+		// Added stylesheet for editor
+		add_editor_style();
+
 	}
 endif;
 add_action( 'after_setup_theme', 'proffice_setup' );
@@ -161,7 +164,7 @@ function proffice_scripts() {
 	wp_enqueue_style( 'proffice-style', get_stylesheet_uri() );
 
 	// Fontawesome CDN
-	wp_enqueue_style( 'fontawesomne', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', array(), null );
+	wp_enqueue_style( 'proffice_fontawesomne', get_theme_file_uri().'/assets/css/font-awesome.min.css', array(), null );
 
 	//Custom Font
 	wp_enqueue_style( 'proffice_font', 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700', array(), null );

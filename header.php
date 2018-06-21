@@ -70,7 +70,7 @@ $page_bg_images = get_theme_mod('page_banner_bg');
                                     'theme_location' => 'menu-1',
                                     'container' => '',
                                     'menu_id' => 'nav',
-                                    'fallback_cb' => 'sb_proffice_default_menu',
+                                    'fallback_cb' => 'proffice_default_menu',
                                 ));
                             ?>
                             

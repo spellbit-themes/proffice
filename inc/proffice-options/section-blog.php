@@ -1,8 +1,10 @@
 <?php
 
+
+
 // Blog section
 $wp_customize->add_section('section_blog',array(
-	'title' => 'Blog',
+	'title' => esc_html__('Blog','proffice'),
 	'priority' => 10,
 	'panel' => 'proffice_panel_home'
 ));
@@ -10,6 +12,7 @@ $wp_customize->add_section('section_blog',array(
 //Blog section switch
 $wp_customize->add_setting( 'blog_switch' , array(
 	'default' => 'yes',
+	'sanitize_callback' => 'proffice_radio_sanitization',
 ) );
 
 $wp_customize->add_control(
@@ -22,8 +25,8 @@ $wp_customize->add_control(
 			'settings'       => 'blog_switch',
 			'type'           => 'radio',
 			'choices'        => array(
-				'yes'   => __( 'Yes' ),
-				'no'  => __( 'No' )
+				'yes'   => esc_html__('Yes','proffice'),
+				'no'  => esc_html__('No','proffice'),
 			)
 		)
 	)
@@ -31,7 +34,8 @@ $wp_customize->add_control(
 
 //Section title
 $wp_customize->add_setting( 'section_blog_title' , array(
-	'default' => 'Blog',
+	'default' => esc_html__('Blog','proffice'),
+	'sanitize_callback' => 'wp_filter_nohtml_kses'
 ) );
 
 $wp_customize->add_control(
@@ -39,7 +43,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'section_blog_title',
 		array(
-			'label'          => __( 'Section Title', 'proffice' ),
+			'label'          => esc_html__( 'Section Title', 'proffice' ),
 			'section'        => 'section_blog',
 			'settings'       => 'section_blog_title',
 			'type'           => 'text',
@@ -48,7 +52,8 @@ $wp_customize->add_control(
 );
 //Section subtitle
 $wp_customize->add_setting( 'section_blog_subtitle' , array(
-	'default' => 'Latest News',
+	'default' => esc_html__('Latest News','proffice'),
+	'sanitize_callback' => 'wp_filter_nohtml_kses'
 ) );
 
 $wp_customize->add_control(
@@ -56,7 +61,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'section_blog_subtitle',
 		array(
-			'label'          => __( 'Section Subtitle', 'proffice' ),
+			'label'          => esc_html__( 'Section Subtitle', 'proffice' ),
 			'section'        => 'section_blog',
 			'settings'       => 'section_blog_subtitle',
 			'type'           => 'text',
@@ -65,7 +70,8 @@ $wp_customize->add_control(
 );
 //Post per page
 $wp_customize->add_setting( 'section_blog_post_count' , array(
-	'default' => '3',
+	'default' => 3,
+	'sanitize_callback' => 'wp_filter_nohtml_kses'
 ) );
 
 $wp_customize->add_control(
@@ -73,8 +79,8 @@ $wp_customize->add_control(
 		$wp_customize,
 		'section_blog_post_count',
 		array(
-			'label'          => __( 'Post Count', 'proffice' ),
-			'description'          => __( 'Insert a number', 'proffice' ),
+			'label'          => esc_html__( 'Post Count', 'proffice' ),
+			'description'          => esc_html__( 'Insert a number', 'proffice' ),
 			'section'        => 'section_blog',
 			'settings'       => 'section_blog_post_count',
 			'type'           => 'text',
@@ -83,7 +89,8 @@ $wp_customize->add_control(
 );
 //Blog post order
 $wp_customize->add_setting( 'blog_order' , array(
-	'default' => 'ASC',
+	'default' => esc_html('ASC'),
+	'sanitize_callback' => 'proffice_radio_sanitization',
 ) );
 
 $wp_customize->add_control(
@@ -91,14 +98,28 @@ $wp_customize->add_control(
 		$wp_customize,
 		'blog_order',
 		array(
-			'label'          => __( 'Post Order', 'proffice' ),
+			'label'          => esc_html__( 'Post Order', 'proffice' ),
 			'section'        => 'section_blog',
 			'settings'       => 'blog_order',
 			'type'           => 'radio',
 			'choices'        => array(
-				'ASC'   => __( 'ASC' ),
-				'DESC'  => __( 'DESC' )
+				'ASC'   => esc_html__('ASC','proffice'),
+				'DESC'  => esc_html__('DESC','proffice')
 			)
 		)
 	)
 );
+
+//radio box sanitization function
+        function proffice_radio_sanitization( $input, $setting ){
+         
+            //input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
+            $input = sanitize_key($input);
+ 
+            //get the list of possible radio box options 
+            $choices = $setting->manager->get_control( $setting->id )->choices;
+                             
+            //return input if valid or return default option
+            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+             
+        }

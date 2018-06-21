@@ -2,7 +2,7 @@
 
 // Service section
 $wp_customize->add_section('section_service',array(
-	'title' => 'Services',
+	'title' => esc_html__('Services','proffice'),
 	'priority' => 10,
 	'panel' => 'proffice_panel_home'
 ));
@@ -10,6 +10,7 @@ $wp_customize->add_section('section_service',array(
 //service section switch
 $wp_customize->add_setting( 'service_switch' , array(
 	'default' => 'yes',
+	'sanitize_callback' => 'proffice_radio_sanitization',
 ) );
 
 $wp_customize->add_control(
@@ -17,13 +18,13 @@ $wp_customize->add_control(
 		$wp_customize,
 		'service_switch',
 		array(
-			'label'          => __( 'Do you need service section', 'proffice' ),
+			'label'          => esc_html__( 'Do you need service section', 'proffice' ),
 			'section'        => 'section_service',
 			'settings'       => 'service_switch',
 			'type'           => 'radio',
 			'choices'        => array(
-				'yes'   => __( 'Yes' ),
-				'no'  => __( 'No' )
+				'yes'   => esc_html__('Yes','proffice'),
+				'no'  => esc_html__('No','proffice')
 			)
 		)
 	)
@@ -31,7 +32,9 @@ $wp_customize->add_control(
 
 //Section title
 $wp_customize->add_setting( 'section_service_title' , array(
-	'default' => 'Our Services',
+	'default' => esc_html__('Our Services','proffice'),
+	'sanitize_callback' => 'wp_filter_nohtml_kses'
+
 ) );
 
 $wp_customize->add_control(
@@ -39,7 +42,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'section_service_title',
 		array(
-			'label'          => __( 'Section Title', 'proffice' ),
+			'label'          => esc_html__( 'Section Title', 'proffice' ),
 			'section'        => 'section_service',
 			'settings'       => 'section_service_title',
 			'type'           => 'text',
@@ -48,7 +51,8 @@ $wp_customize->add_control(
 );
 //Section subtitle
 $wp_customize->add_setting( 'section_service_subtitle' , array(
-	'default' => 'What We Do',
+	'default' => esc_html__('What we do','proffice'),
+	'sanitize_callback' => 'wp_filter_nohtml_kses'
 ) );
 
 $wp_customize->add_control(
@@ -56,7 +60,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'section_service_subtitle',
 		array(
-			'label'          => __( 'Section Subtitle', 'proffice' ),
+			'label'          => esc_html__( 'Section Subtitle', 'proffice' ),
 			'section'        => 'section_service',
 			'settings'       => 'section_service_subtitle',
 			'type'           => 'text',

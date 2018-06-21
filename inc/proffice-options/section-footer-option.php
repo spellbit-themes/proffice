@@ -2,7 +2,7 @@
 
 // Footer Options
 $wp_customize->add_section('section_footer_option',array(
-	'title' => 'Footer Options',
+	'title' => esc_html__('Footer Options','proffice'),
 	'priority' => 10,
 	'panel' => 'proffice_panel_general'
 ));
@@ -10,7 +10,8 @@ $wp_customize->add_section('section_footer_option',array(
 
 //Footer Copyright text
 $wp_customize->add_setting( 'footer_copyright_text' , array(
-	'default' => '&copy; All right reserved by <a href="http://www.spellbit.com">Spellbit</a>',
+	'default' => 'All right reserved by <a href="'.esc_html( wp_get_theme()->get( "ThemeURI" ) ).'">Spellbit</a>',
+	'sanitize_callback' => 'wp_filter_nohtml_kses',
 ) );
 
 $wp_customize->add_control(
@@ -18,7 +19,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'footer_copyright_text',
 		array(
-			'label'          => __( 'Copyright Info', 'proffice' ),
+			'label'          => esc_html__( 'Copyright Info', 'proffice' ),
 			'section'        => 'section_footer_option',
 			'settings'       => 'footer_copyright_text',
 			'type'           => 'textarea',

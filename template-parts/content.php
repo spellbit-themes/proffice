@@ -22,21 +22,21 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				sb_proffice_posted_on();
-				sb_proffice_posted_by();
+				proffice_posted_on();
+				proffice_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php sb_proffice_post_thumbnail(); ?>
+	<?php proffice_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'sb_proffice' ),
+				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'proffice' ),
 				array(
 					'span' => array(
 						'class' => array(),
@@ -47,13 +47,13 @@
 		) );
 
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sb_proffice' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'proffice' ),
 			'after'  => '</div>',
 		) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php sb_proffice_entry_footer(); ?>
+		<?php proffice_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

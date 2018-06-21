@@ -14,27 +14,27 @@
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses sb_proffice_header_style()
+ * @uses proffice_header_style()
  */
-function sb_proffice_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'sb_proffice_custom_header_args', array(
+function proffice_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'proffice_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'sb_proffice_header_style',
+		'wp-head-callback'       => 'proffice_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'sb_proffice_custom_header_setup' );
+add_action( 'after_setup_theme', 'proffice_custom_header_setup' );
 
-if ( ! function_exists( 'sb_proffice_header_style' ) ) :
+if ( ! function_exists( 'proffice_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see sb_proffice_custom_header_setup().
+	 * @see proffice_custom_header_setup().
 	 */
-	function sb_proffice_header_style() {
+	function proffice_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*
