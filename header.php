@@ -9,7 +9,8 @@
  * @package proffice
  */
 $enable_page_background = get_theme_mod('page_banner_switch', true);
-$page_bg_images = get_theme_mod('page_banner_bg');
+$default_image = get_template_directory_uri().'/assets/images/slider/page-banner.jpg';
+$page_bg_images = get_theme_mod('page_banner_bg',$default_image);
 
 ?>
 <!doctype html>

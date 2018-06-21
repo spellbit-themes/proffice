@@ -41,7 +41,9 @@ get_header();
 
             ?>      
           </div><!-- end blog psots -->
-<?php get_sidebar(); ?>
+
+          <?php get_sidebar(); ?>
+
         </div>
     </div>
 </div>

@@ -25,9 +25,6 @@ $copy_info       = get_theme_mod('footer_copyright_text');
 <footer class="site-footer">
     <div class="container">
         <div class="row">
-<?php if ( is_active_sidebar( 'footer-widget' ) ) : ?>
-     <?php dynamic_sidebar('footer-widget'); ?>
-<?php else: ?>
             <div class="col-lg-3 col-md-6 col-12 align-self-center">
                 <div class="single-footer">
                     <h2 class="footer-titile">about us</h2>
@@ -74,8 +71,7 @@ $copy_info       = get_theme_mod('footer_copyright_text');
                         <a href="#"> media</a>
                     </div>
                 </div>
-            </div><!-- end single footer -->
-<?php endif; ?>              
+            </div><!-- end single footer -->             
         </div>
     </div>
 
