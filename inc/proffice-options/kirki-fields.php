@@ -124,6 +124,36 @@ function proffice_kirki_fields( $fields ) {
 		)
 	);
 
+
+	/*Footer Social repeater*/
+
+
+	$fields[] = array(
+		'type'        => 'repeater',
+		'label'       => esc_attr__( 'Social icon', 'proffice' ),
+		'section'     => 'section_footer_option',
+		'priority'    => 10,
+		'row_label' => array(
+			'type' => 'text',
+			'value' => esc_attr__('Social icon', 'proffice' ),
+		),
+		'button_label' => esc_attr__('Add icon', 'proffice' ),
+		'settings'     => 'footer_social_profiles',
+		'fields' => array(
+			'social_icon' => array(
+				'type'        => 'text',
+				'label'       => esc_attr__( 'Icon Name', 'proffice' ),
+				'description' => esc_attr__( 'write a social icon name here from https://fontawesome.com/v4.7.0/icons/', 'proffice' ),
+				'default'     => 'facebook',
+			),
+			'social_link' => array(
+				'type'        => 'text',
+				'label'       => esc_attr__( 'Url', 'proffice' ),
+				'description' => esc_attr__( 'Put social profile url', 'proffice' ),
+				'default'     => 'https://www.facebook.com/myid'
+			),
+		)
+	);
 	/*Homepage section Order*/
 	$fields[] = array(
 		'type'        => 'sortable',

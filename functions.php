@@ -132,6 +132,7 @@ add_action( 'after_setup_theme', 'proffice_content_width', 0 );
  */
 function proffice_widgets_init() {
 
+	// Footer sidebar
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer Sidebar', 'proffice' ),
 		'id'            => 'footer-widget',
@@ -143,17 +144,26 @@ function proffice_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 
-	// default sidebar
+	// Blog sidebar
 	register_sidebar( array(
-		'name'          => esc_html__( 'Default Sidebar', 'proffice' ),
-		'id'            => 'default-widget',
-		'description'   => esc_html__( 'This is default sidebar for single page,  blog, single post sidebar', 'proffice' ),
+		'name'          => esc_html__( 'Blog Sidebar', 'proffice' ),
+		'id'            => 'blog-sidebar',
+		'description'   => esc_html__( 'This is default sidebar for blog, single post sidebar', 'proffice' ),
 		'before_widget' => '<div class="card custuom-single-card">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<div class="card-header">',
 		'after_title'   => '</div><div class="card-body">',
 	) );
-
+	// default sidebar
+	register_sidebar( array(
+		'name'          => esc_html__( 'Page Sidebar', 'proffice' ),
+		'id'            => 'page-sidebar',
+		'description'   => esc_html__( 'This is default sidebar for single page', 'proffice' ),
+		'before_widget' => '<div class="card custuom-single-card">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<div class="card-header">',
+		'after_title'   => '</div><div class="card-body">',
+	) );
 }
 add_action( 'widgets_init', 'proffice_widgets_init' );
 

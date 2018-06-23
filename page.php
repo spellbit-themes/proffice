@@ -19,7 +19,11 @@ get_header();
     <div class="container">
         <div class="row">
 
+          <?php if(is_active_sidebar('page-sidebar')) : ?>
           <div class="col-lg-8">
+            <?php else: ?>
+          <div class="col-lg-12">
+          <?php endif; ?>
           	<?php
               if ( have_posts() ) :
                 while ( have_posts() ) : the_post(); 
@@ -38,12 +42,9 @@ get_header();
 
             ?>      
           </div><!-- end blog psots -->
-
-      
-      
-            <?php get_sidebar(); ?>
-          
-
+        <?php if(is_active_sidebar('page-sidebar')) : ?>
+          <?php get_sidebar(); ?>
+        <?php endif; ?>
         </div>
     </div>
 </div>
