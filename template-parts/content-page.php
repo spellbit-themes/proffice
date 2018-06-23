@@ -44,7 +44,12 @@
 				'<span class="edit-link">',
 				'</span>'
 			);
-			?>
+
+// If comments are open or we have at least one comment, load up the comment template.
+        			if ( comments_open() || get_comments_number() ) :
+        				comments_template();
+        			endif;
+        			?>
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

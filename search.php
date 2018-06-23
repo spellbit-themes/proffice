@@ -9,10 +9,14 @@
 
 get_header();
 ?>
-
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
-
+<div class="blog-area innerpage">
+    <div class="container">
+        <div class="row">
+          <?php if(is_active_sidebar('blog-sidebar')) : ?>
+          <div class="col-lg-8">
+            <?php else: ?>
+          <div class="col-lg-12">
+          <?php endif; ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
@@ -46,9 +50,13 @@ get_header();
 
 		endif;
 		?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
+    </div>
+        <?php if(is_active_sidebar('blog-sidebar')) : ?>
+          <?php get_sidebar(); ?>
+        <?php endif; ?>
+        </div>
+    </div>
+</div>
 
 <?php
 get_sidebar();

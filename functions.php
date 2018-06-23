@@ -105,7 +105,19 @@ if ( ! function_exists( 'proffice_setup' ) ) :
 
 		// Added stylesheet for editor
 		add_editor_style();
-
+/**
+ * Filter the "read more" excerpt string link to the post.
+ *
+ * @param string $more "Read more" excerpt string.
+ * @return string (Maybe) modified "read more" excerpt string.
+ */
+function proffice_excerpt_more( $more ) {
+    return sprintf( '<a class="read-more" href="%1$s">%2$s</a>',
+        get_permalink( get_the_ID() ),
+        __( ' Read More', 'proffice' )
+    );
+}
+add_filter( 'excerpt_more', 'proffice_excerpt_more' );
 	}
 endif;
 add_action( 'after_setup_theme', 'proffice_setup' );

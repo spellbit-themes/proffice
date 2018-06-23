@@ -27,7 +27,10 @@ get_header();
                   	while ( have_posts() ) : the_post(); 
         			get_template_part( 'template-parts/posts/content', get_post_format() );
 
-        			the_post_navigation();
+        			the_post_navigation(array(
+                'prev_text'  => __( 'Previous Post: %title' ),
+                'next_text'  => __( 'Next Post: %title' ),
+              ));
 
         			// If comments are open or we have at least one comment, load up the comment template.
         			if ( comments_open() || get_comments_number() ) :
