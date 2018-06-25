@@ -162,9 +162,9 @@ function proffice_widgets_init() {
 		'id'            => 'blog-sidebar',
 		'description'   => esc_html__( 'This is default sidebar for blog, single post sidebar', 'proffice' ),
 		'before_widget' => '<div class="card custuom-single-card">',
-		'after_widget'  => '</div></div>',
+		'after_widget'  => '</div>',
 		'before_title'  => '<div class="card-header">',
-		'after_title'   => '</div><div class="card-body">',
+		'after_title'   => '</div>',
 	) );
 	// default sidebar
 	register_sidebar( array(
@@ -172,9 +172,9 @@ function proffice_widgets_init() {
 		'id'            => 'page-sidebar',
 		'description'   => esc_html__( 'This is default sidebar for single page', 'proffice' ),
 		'before_widget' => '<div class="card custuom-single-card">',
-		'after_widget'  => '</div></div>',
+		'after_widget'  => '</div>',
 		'before_title'  => '<div class="card-header">',
-		'after_title'   => '</div><div class="card-body">',
+		'after_title'   => '</div>',
 	) );
 }
 add_action( 'widgets_init', 'proffice_widgets_init' );

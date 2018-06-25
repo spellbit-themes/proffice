@@ -697,25 +697,33 @@ article.single-blog.innerpage.Fullpage img {
   border: none;
   -webkit-box-shadow: 0px 8px 14px 0px rgba(102, 102, 102, 0.15);
           box-shadow: 0px 8px 14px 0px rgba(102, 102, 102, 0.15);
-  margin-bottom: 30px; }
+  margin-bottom: 30px; 
+padding: 1.25rem;
+}
   .custuom-single-card.card .card-header {
     background: #70a1ff;
     color: #fff;
     border-bottom: 1px solid transparent;
     font-size: 20px;
     font-weight: 500;
-    text-transform: uppercase; }
+    text-transform: uppercase; 
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+  margin-top: -1.25rem;
+  margin-bottom: 1.25rem;
+
+  }
      .custuom-single-card.card .card-header  .rsswidget{
       font-size: 20px;
       color: #fff;
      }
-  .custuom-single-card.card .card-body ul {
+  .custuom-single-card.card  ul {
     margin: 0;
     padding: 0;
     list-style: none; }
-    .custuom-single-card.card .card-body ul li {
+    .custuom-single-card.card  ul li {
       display: block; }
-      .custuom-single-card.card .card-body ul li a {
+      .custuom-single-card.card  ul li a {
         
         color: #00325d;
         text-transform: capitalize;
@@ -724,26 +732,26 @@ article.single-blog.innerpage.Fullpage img {
         -webkit-transition: all 0.24s ease-in-out;
         transition: all 0.24s ease-in-out; }
 
-        .custuom-single-card.card .card-body ul li span{
+        .custuom-single-card.card  ul li span{
           font-size: 14px;
           color: #666;
         }
-        .custuom-single-card.card .card-body .rssSummary{
+        .custuom-single-card.card  .rssSummary{
           font-size: 14px;
         }
-        .custuom-single-card.card .card-body ul li{
+        .custuom-single-card.card  ul li{
            border-bottom: 1px dashed  #eee;
            padding: 5px 0;
         }
 
-        .custuom-single-card.card .card-body ul li a:hover {
+        .custuom-single-card.card  ul li a:hover {
           color: #1e90ff;
           padding-left: 5px; }
-      .custuom-single-card.card .card-body ul li:last-child  {
+      .custuom-single-card.card  ul li:last-child  {
         padding-bottom: 0px;
         border-bottom: 1px solid transparent; }
 
-        .custuom-single-card.card .card-body .tagcloud a {
+        .custuom-single-card.card  .tagcloud a {
           display: inline-block;
           color: #333;
           border: 1px solid #1e90ff; 
@@ -756,7 +764,7 @@ article.single-blog.innerpage.Fullpage img {
           -o-transition:all 0.24s ease-in-out ;
           transition:all 0.24s ease-in-out ;
         }
-        .custuom-single-card.card .card-body .tagcloud a:hover{
+        .custuom-single-card.card .tagcloud a:hover{
           background: #1e90ff;
           color: #fff;
         } 
@@ -918,7 +926,7 @@ article.single-blog.innerpage.Fullpage img {
  .search-form label{
   display: block;
 }
-.custuom-single-card.card .card-body select, .single-footer select{
+.custuom-single-card.card  select, .single-footer select{
   display: block;
   width: 100%;
   height: 45px;
