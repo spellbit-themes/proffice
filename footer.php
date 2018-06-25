@@ -8,7 +8,7 @@
  *
  * @package proffice
  */
-
+$enable = get_theme_mod('social_switch', 'yes');
 $social_profiles = get_theme_mod('footer_social_profiles');
 $default_copyinfo = 'All right reserved by <a href="'.esc_html( wp_get_theme()->get( 'ThemeURI' ) ).'" target="_blank">Spellbit</a>';
 $copy_info       = get_theme_mod('footer_copyright_text',$default_copyinfo);
@@ -33,14 +33,17 @@ $copy_info       = get_theme_mod('footer_copyright_text',$default_copyinfo);
                 <div class="col-md-6 col-12">
                     <ul class="f-social">
                         <?php
+                        if($enable=='yes'):
                         if( $social_profiles ):
                          foreach ($social_profiles as $value) { ?>
                            <li><a href="<?php echo $value['social_link']; ?>"><i class="fa fa-<?php echo $value['social_icon']; ?>" aria-hidden="true"></i></a></li>
                         <?php } else: ?>
-                        
                         <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li> 
+                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>                      
+
+                    <?php endif; ?>
+
                     <?php endif; ?>
                     </ul>
                 </div>
