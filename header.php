@@ -8,9 +8,9 @@
  *
  * @package proffice
  */
+
 $enable_page_background = get_theme_mod('page_banner_switch', true);
-$default_image = get_template_directory_uri().'/assets/images/slider/page-banner.jpg';
-$page_bg_images = get_theme_mod('page_banner_bg',$default_image);
+
 
 ?>
 <!doctype html>
@@ -88,7 +88,7 @@ $page_bg_images = get_theme_mod('page_banner_bg',$default_image);
 
 <?php if( is_page() && !is_front_page() ): ?>
   <?php if($enable_page_background == 'yes'){ ?>
-    <div class="banner-arae" style="background-image: url(<?php echo esc_url($page_bg_images); ?>);">
+    <div class="banner-arae">
         <div class="container">
             <div class="row bn_height justify-content-center align-items-center">
                 <div class="col-12 text-center">
@@ -99,7 +99,19 @@ $page_bg_images = get_theme_mod('page_banner_bg',$default_image);
             </div>
         </div>
     </div>
-<?php }else{ ?>   
+<?php }elseif(is_home()){ ?>
+    <div class="banner-area-blog">
+        <div class="container">
+            <div class="row bn_height justify-content-center align-items-center">
+                <div class="col-12 text-center">
+                    <h2>
+                        <?php wp_title(''); ?>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php}else{ ?>   
     <div class="only-title">
         <div class="col-12 text-center">
             <h2>

@@ -14,7 +14,7 @@ get_header();
     <div class="container">
         <div class="row">
 
-          <?php if(is_active_sidebar('page-sidebar')) : ?>
+          <?php if(is_active_sidebar('blog-sidebar')) : ?>
           <div class="col-lg-8">
             <?php else: ?>
           <div class="col-lg-12">
@@ -52,7 +52,7 @@ get_header();
 		endif;
 		?>
 </div>
-        <?php if(is_active_sidebar('page-sidebar')) : ?>
+        <?php if(is_active_sidebar('blog-sidebar')) : ?>
           <?php get_sidebar(); ?>
         <?php endif; ?>
         </div>

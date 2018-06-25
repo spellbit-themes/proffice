@@ -26,3 +26,26 @@ $wp_customize->add_control(
 		)
 	)
 );
+
+//Footer social switch
+$wp_customize->add_setting( 'social_switch' , array(
+	'default' => 'yes',
+	'sanitize_callback' => 'proffice_radio_sanitization',
+) );
+
+$wp_customize->add_control(
+	new WP_Customize_Control(
+		$wp_customize,
+		'social_switch',
+		array(
+			'label'          => __( 'Do you need social icon in footer', 'proffice' ),
+			'section'        => 'section_footer_option',
+			'settings'       => 'social_switch',
+			'type'           => 'radio',
+			'choices'        => array(
+				'yes'   => esc_html__('Yes','proffice'),
+				'no'  => esc_html__('No','proffice'),
+			)
+		)
+	)
+);
