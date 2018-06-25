@@ -109,6 +109,8 @@ $enable_page_background = get_theme_mod('page_banner_switch', true);
     </div>
 
 <?php }elseif(is_home()) : ?>
+
+<?php if(has_header_image()) : ?>
     <div class="banner-arae banner-area-blog">
         <div class="container">
             <div class="row bn_height justify-content-center align-items-center">
@@ -120,6 +122,14 @@ $enable_page_background = get_theme_mod('page_banner_switch', true);
             </div>
         </div>
     </div>
+    <?php else: ?>
+    <div class="only-title-blog">
+        <div class="col-12 text-center">
+            <h2>
+                <?php wp_title(''); ?>
+            </h2>
+        </div>
+    </div>
 
-
+<?php endif; ?>
 <?php endif; ?>
