@@ -899,12 +899,16 @@ padding: 1.25rem;
 
  .search-form .search-submit{
   position: absolute;
-  right: 15px;
+  right: 0px;
   top: 50%;
   height: 45px;
   border-color: #1b82e6;
   background: #1b82e6;
   color: #fff;
+  -webkit-transform: translateY(-58%);
+  -ms-transform: translateY(-58%);
+  -o-transform: translateY(-58%);
+  transform: translateY(-58%);
 
 
 }
