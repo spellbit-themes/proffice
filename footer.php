@@ -10,7 +10,8 @@
  */
 
 $social_profiles = get_theme_mod('footer_social_profiles');
-$copy_info       = get_theme_mod('footer_copyright_text');
+$default_copyinfo = 'All right reserved by <a href="'.esc_html( wp_get_theme()->get( 'ThemeURI' ) ).'" target="_blank">Spellbit</a>';
+$copy_info       = get_theme_mod('footer_copyright_text',$default_copyinfo);
 ?>
 <!--footer section start-->
 <?php if(is_active_sidebar('footer-widget')): ?>
@@ -27,9 +28,7 @@ $copy_info       = get_theme_mod('footer_copyright_text');
             <div class="row align-items-center">
                 <div class="col-md-6 col-12"><?php if($copy_info){
                  echo wpautop($copy_info);
-             }else{
-                echo __('All right reserved by <a href="https://spellbit.com/product/freemium/proffice" target="_blank">Spellbit</a>','proffice');
-            }
+             }
             ?></div>
                 <div class="col-md-6 col-12">
                     <ul class="f-social">

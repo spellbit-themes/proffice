@@ -28,8 +28,8 @@ get_header();
         			get_template_part( 'template-parts/posts/content', get_post_format() );
 
         			the_post_navigation(array(
-                'prev_text'  => __( 'Previous Post: %title' ),
-                'next_text'  => __( 'Next Post: %title' ),
+                'prev_text'  => __( 'Previous Post: %title','proffice' ),
+                'next_text'  => __( 'Next Post: %title','proffice' ),
               ));
 
         			// If comments are open or we have at least one comment, load up the comment template.

@@ -36,7 +36,7 @@ $page_bg_images = get_theme_mod('page_banner_bg',$default_image);
                 <div class="row align-items-center">
                     <div class="col-md-3 col-12 col">
                         <div class="site-logo">
-                            <a href="<?php bloginfo('url'); ?>">
+                            <a href="<?php echo esc_url( home_url() ); ?>">
 	                            <?php
 
 
