@@ -233,6 +233,14 @@ $page_bg_images = get_theme_mod('page_banner_bg',$default_image);
             background-image: url(<?php echo esc_url($page_bg_images); ?>);
         }
     </style>
+<?php }elseif (is_home()) { ?>
+
+	<style>
+        .banner-arae.banner-area-blog{
+            background-image: url(<?php echo header_image(); ?>);
+        }
+    </style>
+
 <?php } }
 add_action( 'wp_head', 'proffice_single_page_banner' );
 

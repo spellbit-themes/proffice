@@ -109,7 +109,7 @@ $enable_page_background = get_theme_mod('page_banner_switch', true);
     </div>
 
 <?php }elseif(is_home()) : ?>
-    <div class="banner-area-blog">
+    <div class="banner-arae banner-area-blog">
         <div class="container">
             <div class="row bn_height justify-content-center align-items-center">
                 <div class="col-12 text-center">
