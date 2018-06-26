@@ -225,13 +225,18 @@ add_action( 'customize_controls_enqueue_scripts', 'proffice_custom_customize_enq
 //Add page banner background image
 function proffice_single_page_banner() {
 	if(is_page()){
-$default_image = get_template_directory_uri().'/assets/images/slider/page-banner.jpg';
-$featured_img_url = get_the_post_thumbnail_url('full');
-var_dump($featured_img_url);
+// Get Featured image url
+$page_id = get_queried_object_id();
+if ( has_post_thumbnail( $page_id ) ) :
+    $image_array = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'full' );
+    $image = $image_array[0];
+else :
+    $image = get_template_directory_uri().'/assets/images/slider/page-banner.jpg';
+endif;
     ?>
     <style>
         .banner-arae{
-            background-image: url(<?php echo esc_url($featured_img_url); ?>);
+            background-image: url(<?php echo esc_url($image); ?>);
         }
     </style>
 <?php }elseif (is_home()) { ?>

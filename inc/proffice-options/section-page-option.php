@@ -31,24 +31,6 @@ $wp_customize->add_control(
 	)
 );
 
-//Page banner bg
-$wp_customize->add_setting( 'page_banner_bg' , array(
-	'default' => get_template_directory_uri().'/assets/images/slider/page-banner.jpg',
-	'sanitize_callback' => 'proffice_image_sanitization',
-) );
-
-$wp_customize->add_control(
-	new WP_Customize_Upload_Control(
-		$wp_customize,
-		'page_banner_bg',
-		array(
-			'label'      => esc_html__( 'Page Banner Image', 'proffice' ),
-			'section'    => 'section_page_option',
-			'settings'   => 'page_banner_bg',
-
-		) )
-);
-
 function proffice_image_sanitization( $input, $default = '' ) {
 	// Array of valid image file types
 	// The array includes image mime types
