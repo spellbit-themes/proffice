@@ -655,6 +655,17 @@ article.single-blog, .comments-area {
     -webkit-box-shadow: none;
             box-shadow: none;
     border: 1px solid #eee; }
+    article.single-blog.innerpage.sticky{
+      border: 1px solid #1e90ff;
+      -webkit-box-shadow: 0px 8px 14px 0px rgba(30, 144, 255, 0.10);
+          box-shadow: 0px 8px 14px 0px rgba(30, 144, 255, 0.10);
+    }
+    article.single-blog.innerpage.sticky{
+      
+      -webkit-box-shadow: 0px 8px 14px 0px rgba(30, 144, 255, 0.15);
+          box-shadow: 0px 8px 14px 0px rgba(30, 144, 255, 0.15);
+    }
+
   article.single-blog .blog-content h2 {
     font-size: 20px;
     text-transform: capitalize;

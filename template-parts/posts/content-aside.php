@@ -1,6 +1,5 @@
 <?php $content = wp_trim_words(get_the_content(), 40, ''); ?>
 <article class="single-blog innerpage Fullpage post-aside">
-	<h2>content-aside</h2>	
   <div class="blog-content">
      <?php if(is_single()){?>
       <h2><?php the_title(); ?></h2>
