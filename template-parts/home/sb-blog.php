@@ -56,8 +56,8 @@ $enable = get_theme_mod('blog_switch', true);
                           <footer class="blog-footer">
                               <ul>
                                   <li><a href="<?php the_permalink(); ?>"><?php echo get_the_date('F d, Y'); ?></a></li>
-                                  <li><?php the_category(','); ?></li>
-                                  <li><i class="fa fa-commenting" aria-hidden="true"></i> <?php comments_popup_link('0','1 comment','%','comment-class','comments off'); ?></li>
+                                  <li><i class="fa fa-folder-o" aria-hidden="true"></i><?php the_category(','); ?></li>
+                                  <li><?php comments_popup_link('0<i class="fa fa-commenting" aria-hidden="true"></i>','1 comment<i class="fa fa-commenting" aria-hidden="true"></i>','% <i class="fa fa-commenting" aria-hidden="true"></i>','comment-class','<span class="dashicons dashicons-welcome-comments"></span>'); ?></li>
                                   <li><a href="#"> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
                               </ul>
                           </footer>
