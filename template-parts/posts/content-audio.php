@@ -16,7 +16,7 @@
           <ul>
               <li>Posted on <?php echo get_the_date('F d, Y'); ?></li>
               <li><?php the_category(''); ?></li>
-              <li><?php comments_popup_link('0','1 comment','% ','comment-class','comments off'); ?>
+              <li><?php comments_popup_link('0<i class="fa fa-commenting" aria-hidden="true"></i>','1 comment<i class="fa fa-commenting" aria-hidden="true"></i>','% <i class="fa fa-commenting" aria-hidden="true"></i>','comment-class','<span class="dashicons dashicons-welcome-comments"></span>'); ?>
               </li>
               
           </ul>
