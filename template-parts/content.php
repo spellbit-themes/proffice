@@ -9,25 +9,25 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article id="post-<?php the_ID(); ?>" <?php post_class(array('single-blog', 'innerpage', 'Fullpage')); ?>>
+	<div class="blog-content search">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
+			<p class="entry-meta">
 				<?php
 				proffice_posted_on();
 				proffice_posted_by();
 				?>
-			</div><!-- .entry-meta -->
+			</p><!-- .entry-meta -->
 		<?php endif; ?>
-	</header><!-- .entry-header -->
+	
 
 	<?php proffice_post_thumbnail(); ?>
 
@@ -61,4 +61,5 @@
 	<footer class="entry-footer">
 		<?php proffice_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+	</div>
 </article><!-- #post-<?php the_ID(); ?> -->
