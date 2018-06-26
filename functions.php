@@ -226,11 +226,12 @@ add_action( 'customize_controls_enqueue_scripts', 'proffice_custom_customize_enq
 function proffice_single_page_banner() {
 	if(is_page()){
 $default_image = get_template_directory_uri().'/assets/images/slider/page-banner.jpg';
-$page_bg_images = get_theme_mod('page_banner_bg',$default_image);
+$featured_img_url = get_the_post_thumbnail_url('full');
+var_dump($featured_img_url);
     ?>
     <style>
         .banner-arae{
-            background-image: url(<?php echo esc_url($page_bg_images); ?>);
+            background-image: url(<?php echo esc_url($featured_img_url); ?>);
         }
     </style>
 <?php }elseif (is_home()) { ?>
