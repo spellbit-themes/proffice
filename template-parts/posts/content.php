@@ -10,7 +10,7 @@
       <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     <?php } ?>
       <?php if(!is_single()){?>
-      <?php echo wpautop($content); ?><a href="<?php the_permalink(); ?>">Read More</a>
+      <?php echo wpautop($content); ?><a href="<?php the_permalink(); ?>" class="new-links">Read More <i class="fa fa-long-arrow-right"></i></a>
       <?php }else{ ?>
         <?php echo wpautop(the_content()); ?>
       <?php } ?>
@@ -18,9 +18,8 @@
           <ul>
               <li>Posted on <?php echo get_the_date('F d, Y'); ?></li>
               <li><?php the_category(''); ?></li>
-              <li><i class="fa fa-commenting" aria-hidden="true"></i> <?php comments_popup_link('No comment','1 comment','% comments','comment-class','Comments off'); ?>
+              <li><i class="fa fa-commenting" aria-hidden="true"></i> <?php comments_popup_link('0','1 comment','%','comment-class','comments off'); ?>
               </li>
-              
           </ul>
       </footer>
   </div>
