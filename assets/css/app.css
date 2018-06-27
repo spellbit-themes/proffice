@@ -38,6 +38,9 @@ h6 {
   padding: 0 0 0 20px ;
 }
 
+
+
+
 p {
   font-size: 16px;
   margin: 0 0 15px;
@@ -89,7 +92,7 @@ a:hover {
 
 .th-primary-outline {
   background: transparent;
-  color: #333;
+
   border: 2px solid #1e90ff;
   background: #1e90ff;
   color: #fff; }
@@ -693,7 +696,7 @@ article.single-blog, .comments-area {
       padding: 0 5px;
       color: #1e90ff; }
       article.single-blog .blog-content .blog-footer ul li a i.fa {
-        padding-right: 3px; }
+        padding-left: 3px; }
 
 article.single-blog:hover .blog-content h2 a {
   color: #1e90ff; }
@@ -1108,25 +1111,7 @@ color:#1e90ff;
 }
 
 
-/* unvisited link */
-a:link {
-    color: #1e90ff;
-}
 
-/* visited link */
-a:visited {
-    color: #1e90ff;
-}
-
-/* mouse over link */
-a:hover {
-    color: #1e90ff;
-}
-
-/* selected link */
-a:active {
-    color: #1e90ff;
-}
 
 .footer-bottom p{
   color: #fff;
@@ -1514,9 +1499,18 @@ p.comment-form-cookies-consent label{
 
 
 
+.footer-bottom p a {
+color: #ccc;
+  
 
+}
+.footer-bottom p a:hover{
+  color:#1e90ff;
+}
+.blog-content.search p a.read-more{
+  display: block;
 
-
+}
 
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
