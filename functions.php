@@ -186,23 +186,23 @@ function proffice_scripts() {
 	wp_enqueue_style( 'proffice-style', get_stylesheet_uri() );
 
 	// Fontawesome CDN
-	wp_enqueue_style( 'proffice_fontawesomne', get_theme_file_uri().'/assets/css/font-awesome.min.css', array(), null );
+	wp_enqueue_style( 'proffice-fontawesomne', get_theme_file_uri().'/assets/css/font-awesome.min.css', array(), null );
 
 	//Custom Font
-	wp_enqueue_style( 'proffice_font', 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700', array(), null );
+	wp_enqueue_style( 'proffice-fonts', '//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700', array(), null );
 
 	// Plugin CSS
-	wp_enqueue_style( 'proffice_plug', get_theme_file_uri().'/assets/css/plugins.css', array(), '3.6.0' );
+	wp_enqueue_style( 'proffice-plug', get_theme_file_uri().'/assets/css/plugins.css', array(), '3.6.0' );
 
 	// App CSS
-	wp_enqueue_style( 'proffice_app', get_theme_file_uri().'/assets/css/app.css', array(), null );
+	wp_enqueue_style( 'proffice-app', get_theme_file_uri().'/assets/css/app.css', array(), null );
 
 
 	//plugins JS
-	wp_enqueue_script( 'plug_js', get_theme_file_uri() . '/assets/js/plugins.js', array('jquery'), '4.4.5', true );
+	wp_enqueue_script( 'plug-js', get_theme_file_uri() . '/assets/js/plugins.js', array('jquery'), '4.4.5', true );
 
 	//app JS
-	wp_enqueue_script( 'app_js', get_theme_file_uri() . '/assets/js/app.js', array('jquery'), NULL, true );
+	wp_enqueue_script( 'app-js', get_theme_file_uri() . '/assets/js/app.js', array('jquery'), NULL, true );
 
 	wp_enqueue_script( 'proffice-navigation', get_theme_file_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -217,7 +217,7 @@ add_action( 'wp_enqueue_scripts', 'proffice_scripts' );
 
 //Add custom icon on customizer menu
 function proffice_custom_customize_enqueue() {
-	wp_enqueue_style( 'sb_customizer-css', get_theme_file_uri() . '/assets/css/customizer-css.css' );
+	wp_enqueue_style( 'proffice-customizer-css', get_theme_file_uri() . '/assets/css/customizer-css.css' );
 }
 add_action( 'customize_controls_enqueue_scripts', 'proffice_custom_customize_enqueue' );
 
