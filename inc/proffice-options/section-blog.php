@@ -89,7 +89,7 @@ $wp_customize->add_control(
 );
 //Blog post order
 $wp_customize->add_setting( 'blog_order' , array(
-	'default' => esc_html('ASC'),
+	'default' => 'asc',
 	'sanitize_callback' => 'proffice_radio_sanitization',
 ) );
 
@@ -103,8 +103,8 @@ $wp_customize->add_control(
 			'settings'       => 'blog_order',
 			'type'           => 'radio',
 			'choices'        => array(
-				'ASC'   => esc_html__('ASC','proffice'),
-				'DESC'  => esc_html__('DESC','proffice')
+				'asc'   => esc_html__('ASC','proffice'),
+				'desc'  => esc_html__('DESC','proffice')
 			)
 		)
 	)

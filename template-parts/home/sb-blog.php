@@ -3,8 +3,7 @@
 $title    = get_theme_mod('section_blog_title','Blog');
 $sub_title = get_theme_mod('section_blog_subtitle','Latest News');
 $count    = get_theme_mod('section_blog_post_count',3);
-$order    = get_theme_mod('blog_order','ASC');
-
+$order    = get_theme_mod('blog_order','asc');
 $enable = get_theme_mod('blog_switch', true);
 ?>
 
