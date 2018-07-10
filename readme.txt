@@ -1,11 +1,15 @@
 === proffice ===
 
 Contributors: spellbit
+<<<<<<< HEAD
 Tags: two-columns, left-sidebar,right-sidebar, grid-layout,flexible-header, custom-background, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
+=======
+Tags: two-columns, left-sidebar, right-sidebar, grid-layout, flexible-header, custom-background, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
+>>>>>>> 914a623b9a703a99de6672e5cfcce59a5f572c70
 
 Requires at least: 4.5
 Tested up to: 4.8
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
