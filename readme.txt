@@ -1,7 +1,7 @@
 === proffice ===
 
 Contributors: spellbit
-Tags: two-columns, left-sidebar, right-sidebar, grid-layout,flexible-header, custom-background, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: two-columns, left-sidebar,right-sidebar, grid-layout,flexible-header, custom-background, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 
 Requires at least: 4.5
 Tested up to: 4.8
