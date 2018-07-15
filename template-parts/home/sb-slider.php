@@ -1,9 +1,6 @@
 <?php 
 $slides = get_theme_mod('proffice_slides');
-
 $enable_slide = get_theme_mod('slider_switch', 'yes');
-
-
 ?>
 
 
@@ -28,7 +25,7 @@ $enable_slide = get_theme_mod('slider_switch', 'yes');
                     <div class="row">
                         <div class="col-sm-12 text-center">
                             <h2><?php echo $title; ?></h2>
-                            <?php echo wpautop($desc); ?>
+                            <?php echo wpautop(esc_html($desc)); ?>
                            <?php if($left_btn_text): ?>
                             <a href="<?php echo esc_url($left_btn_url); ?>" class="btn-mr th-primary pill"> <?php echo esc_html($left_btn_text); ?></a>
                             <?php endif; ?>
@@ -46,10 +43,10 @@ $enable_slide = get_theme_mod('slider_switch', 'yes');
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12 text-center">
-                                <h2>WE BUILD UP YOUR BUSINESS</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-                                <a href="#" class="btn-mr th-primary pill"> learn more</a>
-                                <a href="#" class="btn-mr th-primary-outline pill"> our services</a>
+                                <h2><?php _e('WE BUILD UP YOUR BUSINESS','proffice'); ?></h2>
+                                <p><?php _e('Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris','proffice'); ?></p>
+                                <a href="#" class="btn-mr th-primary pill"> <?php _e('learn more','proffice'); ?></a>
+                                <a href="#" class="btn-mr th-primary-outline pill"> <?php _e('our services','proffice'); ?></a>
                             </div>
                         </div>
                     </div>
@@ -61,10 +58,10 @@ $enable_slide = get_theme_mod('slider_switch', 'yes');
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12 text-center">
-                                <h2>WE BUILD UP YOUR BUSINESS</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-                                <a href="#" class="btn-mr th-primary pill"> learn more</a>
-                                <a href="#" class="btn-mr th-primary-outline pill"> our services</a>
+                                <h2><?php _e('WE BUILD UP YOUR BUSINESS','proffice'); ?></h2>
+                                <p><?php _e('Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris','proffice'); ?></p>
+                                <a href="#" class="btn-mr th-primary pill"> <?php _e('learn more','proffice'); ?></a>
+                                <a href="#" class="btn-mr th-primary-outline pill"> <?php _e('our services','proffice'); ?></a>
                             </div>
                         </div>
                     </div>
@@ -76,10 +73,10 @@ $enable_slide = get_theme_mod('slider_switch', 'yes');
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12 text-center">
-                                <h2>WE BUILD UP YOUR BUSINESS</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-                                <a href="#" class="btn-mr th-primary pill"> learn more</a>
-                                <a href="#" class="btn-mr th-primary-outline pill"> our services</a>
+                                <h2><?php _e('WE BUILD UP YOUR BUSINESS','proffice'); ?></h2>
+                                <p><?php _e('Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris','proffice'); ?></p>
+                                <a href="#" class="btn-mr th-primary pill"> <?php _e('learn more','proffice'); ?></a>
+                                <a href="#" class="btn-mr th-primary-outline pill"> <?php _e('our services','proffice'); ?></a>
                             </div>
                         </div>
                     </div>

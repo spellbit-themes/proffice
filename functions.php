@@ -186,10 +186,10 @@ function proffice_scripts() {
 	wp_enqueue_style( 'proffice-style', get_stylesheet_uri() );
 
 	// Fontawesome CDN
-	wp_enqueue_style( 'proffice-fontawesomne', get_theme_file_uri().'/assets/css/font-awesome.min.css', array(), null );
+	wp_enqueue_style( 'fontawesomne', get_theme_file_uri().'/assets/css/font-awesome.css', array(), null );
 
 	//Custom Font
-	wp_enqueue_style( 'proffice-fonts', '//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700', array(), null );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700', array(), null );
 
 	// Plugin CSS
 	wp_enqueue_style( 'proffice-plug', get_theme_file_uri().'/assets/css/plugins.css', array(), '3.6.0' );

@@ -38,9 +38,9 @@ $enable = get_theme_mod('service_switch', 'yes');
         foreach ($services as $service) { ?>
            <div class="col-lg-4 col-md-6 col-12">
                <div class="single-services">
-                   <i class="fa fa-<?php echo $service['service_icon']; ?>" aria-hidden="true"></i>
-                   <h3><?php echo $service['service_title']; ?></h3>
-                   <?php echo wpautop($service['service_desc']); ?>
+                   <i class="fa fa-<?php echo esc_html($service['service_icon']); ?>" aria-hidden="true"></i>
+                   <h3><?php echo esc_html($service['service_title']); ?></h3>
+                   <?php echo wpautop(esc_html($service['service_desc'])); ?>
                </div>
            </div>       
 
@@ -49,43 +49,43 @@ $enable = get_theme_mod('service_switch', 'yes');
           <div class="col-lg-4 col-md-6 col-12">
                    <div class="single-services">
                        <i class="fa fa-desktop" aria-hidden="true"></i>
-                       <h3>web design</h3>
-                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus vitae architecto officia voluptatem aspernatur qui.</p>
+                       <h3><?php _e('web design','proffice'); ?></h3>
+                       <p><?php _e('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus vitae architecto officia voluptatem aspernatur qui.','proffice'); ?></p>
                    </div>
                </div><!-- end single services -->
                <div class="col-lg-4 col-md-6 col-12">
                    <div class="single-services">
                        <i class="fa fa-fire" aria-hidden="true"></i>
-                       <h3>web design</h3>
-                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus vitae architecto officia voluptatem aspernatur qui.</p>
+                       <h3><?php _e('web development','proffice'); ?></h3>
+                       <p><?php _e('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus vitae architecto officia voluptatem aspernatur qui.','proffice'); ?></p>
                    </div>
                </div><!-- end single services -->
                <div class="col-lg-4 col-md-6 col-12">
                    <div class="single-services">
                        <i class="fa fa-leaf" aria-hidden="true"></i>
-                       <h3>web design</h3>
-                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus vitae architecto officia voluptatem aspernatur qui.</p>
+                       <h3><?php _e('graphic design','proffice'); ?></h3>
+                       <p><?php _e('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus vitae architecto officia voluptatem aspernatur qui.','proffice'); ?></p>
                    </div>
                </div><!-- end single services -->
                <div class="col-lg-4 col-md-6 col-12">
                    <div class="single-services">
                        <i class="fa fa-cloud-download" aria-hidden="true"></i>
-                       <h3>web design</h3>
-                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus vitae architecto officia voluptatem aspernatur qui.</p>
+                       <h3><?php _e('digital marketing','proffice'); ?></h3>
+                       <p><?php _e('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus vitae architecto officia voluptatem aspernatur qui.','proffice'); ?></p>
                    </div>
                </div><!-- end single services -->
                <div class="col-lg-4 col-md-6 col-12">
                    <div class="single-services">
                        <i class="fa fa-angellist" aria-hidden="true"></i>
-                       <h3>web design</h3>
-                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus vitae architecto officia voluptatem aspernatur qui.</p>
+                       <h3><?php _e('software development','proffice'); ?></h3>
+                       <p><?php _e('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus vitae architecto officia voluptatem aspernatur qui.','proffice'); ?></p>
                    </div>
                </div><!-- end single services -->
                <div class="col-lg-4 col-md-6 col-12">
                    <div class="single-services">
                        <i class="fa fa-assistive-listening-systems" aria-hidden="true"></i>
-                       <h3>web design</h3>
-                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus vitae architecto officia voluptatem aspernatur qui.</p>
+                       <h3><?php _e('graphic design','proffice'); ?></h3>
+                       <p><?php _e('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus vitae architecto officia voluptatem aspernatur qui.','proffice'); ?></p>
                    </div>
                </div><!-- end single services -->
 

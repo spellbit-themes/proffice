@@ -1,12 +1,8 @@
 <?php 
 $brands = get_theme_mod('proffice_brands');
-
 $enable_brand = get_theme_mod('brand_switch', 'yes');
-?>
 
-
-
-<?php if($enable_brand == 'yes'){ ?>
+if($enable_brand == 'yes'){ ?>
   <div class="product-carosel-area">
         <div class="container">
             <div class="row">
@@ -15,10 +11,10 @@ $enable_brand = get_theme_mod('brand_switch', 'yes');
                 <?php
                 if($brands):
                     foreach ($brands as $brand) {
-                        $url = wp_get_attachment_image_src($brand['brand_logo'], 'brand-thumb');
+                    $url = wp_get_attachment_image_src($brand['brand_logo'], 'brand-thumb');
                 ?>
                         <div class="single-product">
-                            <img src="<?php echo $url['0']; ?>" class="responsive-img" alt="">
+                            <img src="<?php echo esc_url($url['0']); ?>" class="responsive-img" alt="">
                         </div>
                 <?php } else: ?>
                         <div class="single-product">

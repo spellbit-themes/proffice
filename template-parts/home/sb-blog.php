@@ -51,7 +51,7 @@ $enable = get_theme_mod('blog_switch', true);
                       </figure>
                       <div class="blog-content">
                           <h2><a href="<?php the_permalink(); ?>"><?php esc_html(the_title()); ?></a></h2>
-                          <?php echo wpautop($content); ?>
+                          <?php echo wpautop(esc_html($content)); ?>
                           <footer class="blog-footer">
                               <ul>
                                   <li><a href="<?php the_permalink(); ?>"><?php echo get_the_date('F d, Y'); ?></a></li>
