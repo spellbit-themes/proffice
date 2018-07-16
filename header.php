@@ -9,7 +9,7 @@
  * @package proffice
  */
 
-$enable_page_background = get_theme_mod('page_banner_switch', true);
+$proffice_enable_page_background = get_theme_mod('page_banner_switch', true);
 
 
 ?>
@@ -71,7 +71,6 @@ $enable_page_background = get_theme_mod('page_banner_switch', true);
                                     'theme_location' => 'menu-1',
                                     'container' => '',
                                     'menu_id' => 'nav',
-                                    'fallback_cb' => 'proffice_default_menu',
                                 ));
                             ?>
                             
@@ -87,7 +86,7 @@ $enable_page_background = get_theme_mod('page_banner_switch', true);
     </header>
 
 <?php if( is_page() && !is_front_page() ): ?>
-    <?php if($enable_page_background == 'yes'){ ?>
+    <?php if($proffice_enable_page_background == 'yes'){ ?>
         <div class="banner-arae">
             <div class="container">
                 <div class="row bn_height justify-content-center align-items-center">

@@ -9,10 +9,6 @@
 
 get_header();
 ?>
-
-
-
-
 <div class="blog-area innerpage no-padding">
     <div class="container">
         <div class="row">
@@ -48,12 +44,5 @@ get_header();
         </div>
     </div>
 </div>
-
-
-
-
-
-	
-
 <?php
 get_footer();

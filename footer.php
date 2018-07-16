@@ -10,7 +10,8 @@
  */
 $enable = get_theme_mod('social_switch', 'yes');
 $social_profiles = get_theme_mod('footer_social_profiles');
-$default_copyinfo = 'All right reserved by <a href="'.esc_html( wp_get_theme()->get( 'ThemeURI' ) ).'" target="_blank">Spellbit</a>';
+$theme_name = wp_get_theme()->get( 'Name' );
+$default_copyinfo = "All right reserved by $theme_name";
 $copy_info       = get_theme_mod('footer_copyright_text',$default_copyinfo);
 ?>
 <!--footer section start-->

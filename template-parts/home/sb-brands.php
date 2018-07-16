@@ -1,16 +1,16 @@
 <?php 
-$brands = get_theme_mod('proffice_brands');
-$enable_brand = get_theme_mod('brand_switch', 'yes');
+$proffice_brands = get_theme_mod('proffice_brands');
+$proffice_enable_brand = get_theme_mod('brand_switch', 'yes');
 
-if($enable_brand == 'yes'){ ?>
+if($proffice_enable_brand == 'yes'){ ?>
   <div class="product-carosel-area">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="product-carosel-active owl-carousel">
                 <?php
-                if($brands):
-                    foreach ($brands as $brand) {
+                if($proffice_brands):
+                    foreach ($proffice_brands as $brand) {
                     $url = wp_get_attachment_image_src($brand['brand_logo'], 'brand-thumb');
                 ?>
                         <div class="single-product">

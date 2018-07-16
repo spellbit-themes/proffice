@@ -104,7 +104,7 @@ if ( ! function_exists( 'proffice_setup' ) ) :
 		add_image_size('page_title_bg_full', 1900, 300, true);
 
 		// Added stylesheet for editor
-		add_editor_style();
+		add_editor_style('editor-style.css');
 /**
  * Filter the "read more" excerpt string link to the post.
  *
@@ -199,10 +199,10 @@ function proffice_scripts() {
 
 
 	//plugins JS
-	wp_enqueue_script( 'plug-js', get_theme_file_uri() . '/assets/js/plugins.js', array('jquery'), '4.4.5', true );
+	wp_enqueue_script( 'proffice-plug-js', get_theme_file_uri() . '/assets/js/plugins.js', array('jquery'), '4.4.5', true );
 
 	//app JS
-	wp_enqueue_script( 'app-js', get_theme_file_uri() . '/assets/js/app.js', array('jquery'), NULL, true );
+	wp_enqueue_script( 'proffice-app-js', get_theme_file_uri() . '/assets/js/app.js', array('jquery'), NULL, true );
 
 	wp_enqueue_script( 'proffice-navigation', get_theme_file_uri() . '/js/navigation.js', array(), '20151215', true );
 
