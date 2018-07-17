@@ -69,7 +69,7 @@ Source: http://fontawesome.io/
 
 == Changelog ==
 
-= 1.1.0 - July 17 2018 =
+= 1.1.1 - July 17 2018 =
 * Initial release
 
 
