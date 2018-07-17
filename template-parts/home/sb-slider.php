@@ -16,7 +16,7 @@ $proffice_enable_slide = get_theme_mod('slider_switch', 'yes');
                     $left_btn_url = $slide['left_btn_url'];
                     $right_btn_text = $slide['right_btn_text'];
                     $right_btn_url = $slide['right_btn_url'];
-                $url = wp_get_attachment_image_src($slide['slide_bg'], 'slide_full_image');
+                $url = wp_get_attachment_image_src($slide['slide_bg'], 'proffice-slide_full_image');
             ?>
 
         <div class="single-slider" style="background-image: url(<?php echo $url['0']; ?>)">
@@ -24,7 +24,7 @@ $proffice_enable_slide = get_theme_mod('slider_switch', 'yes');
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <h2><?php echo esc_url($title); ?></h2>
+                            <h2><?php echo esc_html($title); ?></h2>
                             <?php echo wpautop(esc_html($desc)); ?>
                            <?php if($left_btn_text): ?>
                             <a href="<?php echo esc_url($left_btn_url); ?>" class="btn-mr th-primary pill"> <?php echo esc_html($left_btn_text); ?></a>

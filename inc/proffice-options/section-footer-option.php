@@ -10,7 +10,7 @@ $wp_customize->add_section('section_footer_option',array(
 
 //Footer Copyright text
 $wp_customize->add_setting( 'footer_copyright_text' , array(
-	'default' => 'All right reserved by <a href="'.esc_html( wp_get_theme()->get( "ThemeURI" ) ).'">Spellbit</a>',
+	'default' => 'All right reserved by '.get_bloginfo('name'),
 	'sanitize_callback' => 'wp_filter_nohtml_kses',
 ) );
 

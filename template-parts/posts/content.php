@@ -1,7 +1,7 @@
 <?php $proffice_content = wp_trim_words(get_the_content(), 40, ''); ?>
 <article <?php post_class(array('single-blog', 'innerpage', 'Fullpage')) ?>>
     <figure class="blog-thumb">
-		<?php the_post_thumbnail('blog-full-image'); ?>
+		<?php the_post_thumbnail('proffice-blog-full-image'); ?>
     </figure>
   <div class="blog-content">
     <?php if(is_single()){?>

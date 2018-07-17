@@ -1492,6 +1492,7 @@ p.comment-form-cookies-consent label{
   background: #1e90ff;
   display: inline-block;
   color: #fff;
+  cursor: pointer;
   border: 1px solid #1e90ff;
   padding: 15px 35px;
 }

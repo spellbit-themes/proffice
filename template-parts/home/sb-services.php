@@ -1,5 +1,5 @@
 <?php 
-$proffice_title = get_theme_mod('section_service_title','Our Service');
+$proffice_title = get_theme_mod('section_service_title','Our Services');
 $proffice_sub_title = get_theme_mod('section_service_subtitle','What We Do');
 
 $proffice_services = get_theme_mod('proffice_services');

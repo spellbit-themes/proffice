@@ -47,7 +47,7 @@ $proffice_enable = get_theme_mod('blog_switch', true);
                <div class="col-lg-4 col-md-6 col-12">
                   <article class="single-blog">
                       <figure class="blog-thumb">
-                          <?php the_post_thumbnail('blog-thumb'); ?>
+                          <?php the_post_thumbnail('proffice-blog-thumb'); ?>
                       </figure>
                       <div class="blog-content">
                           <h2><a href="<?php the_permalink(); ?>"><?php esc_html(the_title()); ?></a></h2>

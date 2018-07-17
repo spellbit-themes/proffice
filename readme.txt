@@ -1,19 +1,11 @@
 === proffice ===
-
 Contributors: spellbit
-<<<<<<< HEAD
-Tags: two-columns, left-sidebar,right-sidebar, grid-layout,flexible-header, custom-background, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
-=======
-Tags: two-columns, left-sidebar, right-sidebar, grid-layout, flexible-header, custom-background, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
->>>>>>> 914a623b9a703a99de6672e5cfcce59a5f572c70
-
 Requires at least: 4.5
 Tested up to: 4.8
 Stable tag: 1.1.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-
-A starter theme called proffice.
+Tags: two-columns, left-sidebar, right-sidebar, grid-layout, flexible-header,custom-background, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 
 == Description ==
 
@@ -25,19 +17,60 @@ PROFFICE – Business WordPress Theme, you can make your business or Corporate n
 2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
-== Frequently Asked Questions ==
+== Copyright ==
 
-= Does this theme support any plugins? =
+Proffice WordPress Theme, Copyright 2018 Spellbit Limited
+Proffice is distributed under the terms of the GNU GPL
 
-proffice includes support for Infinite Scroll in Jetpack.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
 
-== Changelog ==
-
-= 1.0 - May 12 2015 =
-* Initial release
 
 == Credits ==
 
-* Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
-* Font Awesome: http://fontawesome.io/, (C) Dave Gandy, CSS - [MIT](http://opensource.org/licenses/MIT) ; Fonts - [SIL OFL 1.1](http://scripts.sil.org/OFL)
+Proffice bundles the following third-party resources:
+
+Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+
+HTML5 Shiv, Copyright 2014 Alexander Farkas
+Licenses: MIT/GPL2
+Source: https://github.com/aFarkas/html5shiv
+
+jQuery scrollTo, Copyright 2007-2015 Ariel Flesler
+License: MIT
+Source: https://github.com/flesler/jquery.scrollTo
+
+Bootstrap, Copyright (c) 2011-2016 Twitter, Inc.
+License: MIT
+Source: https://github.com/twbs/bootstrap/blob/master/LICENSE
+
+Owl Carousel, Copyright (c) 2013 Owl
+License: MIT
+Source: https://github.com/evenicoulddoit/owl-carousel/blob/master/LICENSE
+
+Animate css, Copyright (c) 2018 Daniel Eden
+License: MIT
+Source: https://github.com/daneden/animate.css/blob/master/LICENSE
+
+Bundled images, Copyright Unsplash.com
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://unsplash.com
+
+normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
+License: MIT
+Source: https://necolas.github.io/normalize.css/
+
+Font Awesome icons, Copyright Dave Gandy
+License: SIL Open Font License, version 1.1.
+Source: http://fontawesome.io/
+
+
+
+== Changelog ==
+
+= 1.1.0 - July 17 2018 =
+* Initial release
+
+
+

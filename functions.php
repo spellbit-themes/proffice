@@ -85,23 +85,18 @@ if ( ! function_exists( 'proffice_setup' ) ) :
 		add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
 
 
-		// blog image
-		add_image_size('blog-image', 698, 275.517, true);		
-
 		// blog image full
-		add_image_size('blog-full-image', 1078, 425.517, true);
+		add_image_size('proffice-blog-full-image', 1078, 425.517, true);
 
 		// blog thumb size
-		add_image_size('blog-thumb', 320, 216.2, true);
+		add_image_size('proffice-blog-thumb', 320, 216.2, true);
 
 		// brand logo
-		add_image_size('brand-thumb', 192, 124.8, true);
+		add_image_size('proffice-brand-thumb', 192, 124.8, true);
 
 		// slide image
-		add_image_size('slide_full_image', 1900, 800, true);
+		add_image_size('proffice-slide_full_image', 1900, 800, true);
 
-		// page title backgrond image
-		add_image_size('page_title_bg_full', 1900, 300, true);
 
 		// Added stylesheet for editor
 		add_editor_style('editor-style.css');

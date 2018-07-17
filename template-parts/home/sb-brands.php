@@ -11,7 +11,7 @@ if($proffice_enable_brand == 'yes'){ ?>
                 <?php
                 if($proffice_brands):
                     foreach ($proffice_brands as $brand) {
-                    $url = wp_get_attachment_image_src($brand['brand_logo'], 'brand-thumb');
+                    $url = wp_get_attachment_image_src($brand['brand_logo'], 'proffice-brand-thumb');
                 ?>
                         <div class="single-product">
                             <img src="<?php echo esc_url($url['0']); ?>" class="responsive-img" alt="">

@@ -39,13 +39,10 @@ $proffice_enable_page_background = get_theme_mod('page_banner_switch', true);
                             <a href="<?php echo esc_url( home_url() ); ?>">
                                 <?php
 
-
                                 // at the beginning of the theme install, show the logo
-                                if (!has_custom_logo()) {
-                                    ?>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo.png" alt="">
-                                    <?php
-                                }else{
+                                if (!has_custom_logo()) { ?>
+                                    <h2><?php bloginfo('name'); ?></h2>
+                               <?php }else{
                                     // Display the Custom Logo
                                     the_custom_logo();
                                 }
